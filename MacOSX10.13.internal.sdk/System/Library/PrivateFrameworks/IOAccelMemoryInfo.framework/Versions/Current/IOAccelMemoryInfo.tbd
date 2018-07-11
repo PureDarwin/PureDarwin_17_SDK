@@ -1,0 +1,14 @@
+--- !tapi-tbd-v2
+archs:           [ i386, x86_64 ]
+uuids:           [ 'i386: FA7E7C91-C1C1-3FFA-B737-774F0990575B', 'x86_64: E062BBA9-0857-384E-978B-4C6346825E51' ]
+platform:        macosx
+install-name:    /System/Library/PrivateFrameworks/IOAccelMemoryInfo.framework/Versions/A/IOAccelMemoryInfo
+exports:         
+  - archs:           [ i386 ]
+    objc-classes:    [ _IOAccelMemoryPoolTotals ]
+  - archs:           [ i386, x86_64 ]
+    symbols:         [ _IOAccelMemoryInfoErrorDomain, _IOAccelMemoryInfoIOKitDriverKey, 
+                       _IOAccelMemoryInfoProcessIDKey ]
+    objc-classes:    [ _IOAccelMemoryInfo, _IOAccelMemoryMapInfo, _IOAccelMemoryOpenCLInfo, 
+                       _IOAccelMemoryOpenGLInfo, _IOAccelMemorySurfaceInfo ]
+...

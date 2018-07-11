@@ -1,0 +1,5 @@
+^CMake Error at OBJECTwithNoSourcesButLinkObjects.cmake:[0-9]+ \(target_link_libraries\):
+  Object library target \"TestObjectLibWithoutSources\" may not link to
+  anything.
+Call Stack \(most recent call first\):
+  CMakeLists.txt:[0-9]+ \(include\)$

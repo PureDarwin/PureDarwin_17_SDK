@@ -1,0 +1,29 @@
+--- !tapi-tbd-v2
+archs:           [ i386, x86_64 ]
+uuids:           [ 'i386: FD9843A7-3C57-324A-ACC5-5B6C91AB3B2B', 'x86_64: F333AEE2-379B-3C2E-BDB9-DFA63478F2E5' ]
+platform:        macosx
+install-name:    /System/Library/PrivateFrameworks/AppSandbox.framework/Versions/A/AppSandbox
+exports:         
+  - archs:           [ x86_64 ]
+    objc-ivars:      [ _AppSandboxEntitlements._appSandboxOnce, _AppSandboxEntitlements._entitlements, 
+                       _AppSandboxEntitlements._requestsAppSandbox, _AppSandboxEntitlements._requestsInheritance, 
+                       _AppSandboxEntitlements._signingIdentifier, _ContainerRepairClient._containerName, 
+                       _ContainerRepairClient._logMessage, _ContainerRepairClient._repairAttemptsCount, 
+                       _ContainerRepairClient._result ]
+  - archs:           [ i386, x86_64 ]
+    symbols:         [ _AppSandboxProfileSnippetModificationDateKey, _AppSandboxProfileSnippetPathKey, 
+                       _AppSandboxRequestContainerIdKey, _AppSandboxRequestContainerRootPathKey, 
+                       _AppSandboxRequestProfileDataKey, _AppSandboxRequestQuarantineFlags, 
+                       _AppSandboxUtilAddressBookLockPathURL, _AppSandboxUtilAddressBookLockPathURLWithError, 
+                       _AppSandboxUtilCalendarLockPathURLWithError, _AppSandboxUtilCollectionScopedBookmarkSecurityPolicyPermitsFD, 
+                       _AppSandboxUtilCollectionScopedBookmarkSecurityPolicyPermitsPath, 
+                       _AppSandboxUtilEntitlementsRequireSandbox, _AppSandboxUtilEntitlementsRequireSandboxForIdentity, 
+                       _AppSandboxUtilMessageTraceFileReference, _AppSandboxUtilRealPathForPath, 
+                       _AppSandboxUtilRealPathForUTF8StringPath, _AppSandboxUtilVersionStringToNumber, 
+                       _ContainerRepairClientRepairResultCString, ___AppSandboxVersionNumber, 
+                       ___AppSandboxVersionString, _kAppSandboxEnableEntitlement, 
+                       _kAppSandboxInheritSandboxEntitlement, _kAppSandboxOptionalSandboxEntitlement, 
+                       _updatedDescriptionForError ]
+    objc-classes:    [ _AppSandboxEntitlements, _AppSandboxFolderRedirector, _AppSandboxRequest, 
+                       _ContainerRepairClient ]
+...

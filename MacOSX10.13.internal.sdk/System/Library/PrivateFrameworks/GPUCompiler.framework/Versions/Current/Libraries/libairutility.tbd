@@ -1,0 +1,13 @@
+--- !tapi-tbd-v2
+archs:           [ i386, x86_64 ]
+uuids:           [ 'i386: D33BC40D-67F4-34A1-B4BA-4B921116E13D', 'x86_64: 50A413CB-569A-346A-B8E3-6CB2AF6DF1FD' ]
+platform:        macosx
+install-name:    /System/Library/PrivateFrameworks/GPUCompiler.framework/Versions/3802/Libraries/libGPUCompiler.dylib
+current-version: 802.3
+objc-constraint: none
+exports:         
+  - archs:           [ i386, x86_64 ]
+    symbols:         [ _MTLGPUCompilerCompileAndSplitFromSource, _MTLGPUCompilerCompileFromSource, 
+                       _MTLGPUCompilerCreate, _MTLGPUCompilerDestroy, _MTLGPUCompilerSpecializeFunction, 
+                       _MTLUpgradeAIRModule, _MTLVerifyAIRModule ]
+...

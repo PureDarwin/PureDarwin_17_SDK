@@ -1,0 +1,9 @@
+--- !tapi-tbd-v2
+archs:           [ x86_64 ]
+uuids:           [ 'x86_64: 8175941A-EE7A-3E67-86BA-FF715A29C198' ]
+platform:        macosx
+install-name:    /System/Library/PrivateFrameworks/Noticeboard.framework/Versions/A/Noticeboard
+exports:         
+  - archs:           [ x86_64 ]
+    objc-classes:    [ _Noticeboard ]
+...

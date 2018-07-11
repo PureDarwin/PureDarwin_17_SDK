@@ -1,0 +1,123 @@
+/*
+ * Copyright (c) 2000-2014 Apple Inc. All rights reserved.
+ *
+ * @APPLE_OSREFERENCE_LICENSE_HEADER_START@
+ * 
+ * This file contains Original Code and/or Modifications of Original Code
+ * as defined in and that are subject to the Apple Public Source License
+ * Version 2.0 (the 'License'). You may not use this file except in
+ * compliance with the License. The rights granted to you under the License
+ * may not be used to create, or enable the creation or redistribution of,
+ * unlawful or unlicensed copies of an Apple operating system, or to
+ * circumvent, violate, or enable the circumvention or violation of, any
+ * terms of an Apple operating system software license agreement.
+ * 
+ * Please obtain a copy of the License at
+ * http://www.opensource.apple.com/apsl/ and read it before using this file.
+ * 
+ * The Original Code and all software distributed under the License are
+ * distributed on an 'AS IS' basis, WITHOUT WARRANTY OF ANY KIND, EITHER
+ * EXPRESS OR IMPLIED, AND APPLE HEREBY DISCLAIMS ALL SUCH WARRANTIES,
+ * INCLUDING WITHOUT LIMITATION, ANY WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE, QUIET ENJOYMENT OR NON-INFRINGEMENT.
+ * Please see the License for the specific language governing rights and
+ * limitations under the License.
+ * 
+ * @APPLE_OSREFERENCE_LICENSE_HEADER_END@
+ */
+/*
+ * @OSF_COPYRIGHT@
+ */
+/* 
+ * Mach Operating System
+ * Copyright (c) 1991,1990,1989,1988,1987 Carnegie Mellon University
+ * All Rights Reserved.
+ * 
+ * Permission to use, copy, modify and distribute this software and its
+ * documentation is hereby granted, provided that both the copyright
+ * notice and this permission notice appear in all copies of the
+ * software, derivative works or modified versions, and any portions
+ * thereof, and that both notices appear in supporting documentation.
+ * 
+ * CARNEGIE MELLON ALLOWS FREE USE OF THIS SOFTWARE IN ITS "AS IS"
+ * CONDITION.  CARNEGIE MELLON DISCLAIMS ANY LIABILITY OF ANY KIND FOR
+ * ANY DAMAGES WHATSOEVER RESULTING FROM THE USE OF THIS SOFTWARE.
+ * 
+ * Carnegie Mellon requests users of this software to return to
+ * 
+ *  Software Distribution Coordinator  or  Software.Distribution@CS.CMU.EDU
+ *  School of Computer Science
+ *  Carnegie Mellon University
+ *  Pittsburgh PA 15213-3890
+ * 
+ * any improvements or extensions that they make and grant Carnegie Mellon
+ * the rights to redistribute these changes.
+ */
+/*
+ */
+/*
+ *	File:	zalloc.h
+ *	Author:	Avadis Tevanian, Jr.
+ *	Date:	 1985
+ *
+ */
+
+
+#ifndef	_KERN_ZALLOC_H_
+#define _KERN_ZALLOC_H_
+
+#include <mach/machine/vm_types.h>
+#include <kern/kern_types.h>
+#include <sys/cdefs.h>
+
+
+__BEGIN_DECLS
+
+
+/* Item definitions for zalloc/zinit/zone_change */
+#define Z_EXHAUST	1	/* Make zone exhaustible	*/
+#define Z_COLLECT	2	/* Make zone collectable	*/
+#define Z_EXPAND	3	/* Make zone expandable		*/
+#define	Z_FOREIGN	4	/* Allow collectable zone to contain foreign elements */
+#define Z_CALLERACCT	5	/* Account alloc/free against the caller */
+#define Z_NOENCRYPT	6	/* Don't encrypt zone during hibernation */
+#define Z_NOCALLOUT 	7	/* Don't asynchronously replenish the zone via callouts */
+#define Z_ALIGNMENT_REQUIRED 8
+#define Z_GZALLOC_EXEMPT 9	/* Not tracked in guard allocation mode */
+#define Z_KASAN_QUARANTINE	10 /* Allow zone elements to be quarantined on free */
+
+
+/* Allocate from zone */
+extern void *	zalloc(
+					zone_t		zone);
+
+/* Non-blocking version of zalloc */
+extern void *	zalloc_noblock(
+					zone_t		zone);
+
+/* Free zone element */
+extern void		zfree(
+					zone_t		zone,
+					void 		*elem);
+
+/* Create zone */
+extern zone_t	zinit(
+					vm_size_t	size,		/* the size of an element */
+					vm_size_t	maxmem,		/* maximum memory to use */
+					vm_size_t	alloc,		/* allocation size */
+					const char	*name);		/* a name for the zone */
+
+/* Change zone parameters */
+extern void		zone_change(
+					zone_t			zone,
+					unsigned int	item,
+					boolean_t		value);
+
+/* Destroy the zone */
+extern void		zdestroy(
+					zone_t		zone);
+
+__END_DECLS
+
+#endif	/* _KERN_ZALLOC_H_ */
+

@@ -1,0 +1,10 @@
+--- !tapi-tbd-v2
+archs:           [ x86_64 ]
+uuids:           [ 'x86_64: 4662C1B6-B3EB-3C93-83C3-38F10CF62ABC' ]
+platform:        macosx
+install-name:    '@rpath/BiometricKitUI.framework/Versions/A/BiometricKitUI'
+objc-constraint: none
+exports:         
+  - archs:           [ x86_64 ]
+    objc-classes:    [ _BKUIBlueButton, _BKUIDeviceImageView, _BiometricKitUI, _BiometricKitUIEnrollViewController ]
+...

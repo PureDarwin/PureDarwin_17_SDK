@@ -1,0 +1,11 @@
+--- !tapi-tbd-v2
+archs:           [ i386, x86_64 ]
+uuids:           [ 'i386: 260982B2-CA75-36CB-89F5-27008AD3CBFC', 'x86_64: 6D7CB3FA-3DF1-3A7E-8A8F-C24839947ACC' ]
+platform:        macosx
+install-name:    /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/ATS.framework/Versions/A/Resources/libType1Scaler.dylib
+objc-constraint: none
+exports:         
+  - archs:           [ i386, x86_64 ]
+    symbols:         [ _T1GetPSFontEncoding, _T1GetSynthesisData, _T1ReleaseSynthesisData, 
+                       _Type1ScalerOpen ]
+...

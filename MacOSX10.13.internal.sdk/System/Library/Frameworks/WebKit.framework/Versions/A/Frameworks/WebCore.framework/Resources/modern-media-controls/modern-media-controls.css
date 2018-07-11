@@ -1,0 +1,1239 @@
+/*
+ * Copyright (C) 2017 Apple Inc. All Rights Reserved.
+ *
+ * Redistribution and use in source and binary forms, with or without
+ * modification, are permitted provided that the following conditions
+ * are met:
+ * 1. Redistributions of source code must retain the above copyright
+ *    notice, this list of conditions and the following disclaimer.
+ * 2. Redistributions in binary form must reproduce the above copyright
+ *    notice, this list of conditions and the following disclaimer in the
+ *    documentation and/or other materials provided with the distribution.
+ *
+ * THIS SOFTWARE IS PROVIDED BY APPLE INC. ``AS IS'' AND ANY
+ * EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+ * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR
+ * PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL APPLE INC. OR
+ * CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
+ * EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
+ * PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR
+ * PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY
+ * OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+ * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+ * OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+ */
+
+.activity-indicator {
+    position: absolute;
+    mix-blend-mode: plus-lighter;
+}
+
+.activity-indicator > div {
+    position: absolute;
+    left: 6px;
+    width: 2px;
+    height: 4px;
+    border-radius: 1px;
+    background-color: white;
+    animation-name: activity-indicator-pulse;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    transform-origin: 50% 7px;
+}
+
+.activity-indicator > .ne {
+    transform: rotate(45deg);
+    animation-delay: -875ms;
+}
+
+.activity-indicator > .e {
+    transform: rotate(90deg);
+    animation-delay: -750ms;
+}
+
+.activity-indicator > .se {
+    transform: rotate(135deg);
+    animation-delay: -625ms;
+}
+
+.activity-indicator > .s {
+    transform: rotate(180deg);
+    animation-delay: -500ms;
+}
+
+.activity-indicator > .sw {
+    transform: rotate(-135deg);
+    animation-delay: -375ms;
+}
+
+.activity-indicator > .w {
+    transform: rotate(-90deg);
+    animation-delay: -250ms;
+}
+
+.activity-indicator > .nw {
+    transform: rotate(-45deg);
+    animation-delay: -125ms;
+}
+
+@keyframes activity-indicator-pulse {
+    from { opacity: 0.9  }
+    to   { opacity: 0.25 }
+}
+/*
+ * Copyright (C) 2016 Apple Inc. All Rights Reserved.
+ *
+ * Redistribution and use in source and binary forms, with or without
+ * modification, are permitted provided that the following conditions
+ * are met:
+ * 1. Redistributions of source code must retain the above copyright
+ *    notice, this list of conditions and the following disclaimer.
+ * 2. Redistributions in binary form must reproduce the above copyright
+ *    notice, this list of conditions and the following disclaimer in the
+ *    documentation and/or other materials provided with the distribution.
+ *
+ * THIS SOFTWARE IS PROVIDED BY APPLE INC. ``AS IS'' AND ANY
+ * EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+ * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR
+ * PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL APPLE INC. OR
+ * CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
+ * EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
+ * PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR
+ * PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY
+ * OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+ * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+ * OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+ */
+
+button.airplay.on > picture {
+    background-color: -apple-wireless-playback-target-active !important;
+    mix-blend-mode: normal !important;
+}
+/*
+ * Copyright (C) 2017 Apple Inc. All Rights Reserved.
+ *
+ * Redistribution and use in source and binary forms, with or without
+ * modification, are permitted provided that the following conditions
+ * are met:
+ * 1. Redistributions of source code must retain the above copyright
+ *    notice, this list of conditions and the following disclaimer.
+ * 2. Redistributions in binary form must reproduce the above copyright
+ *    notice, this list of conditions and the following disclaimer in the
+ *    documentation and/or other materials provided with the distribution.
+ *
+ * THIS SOFTWARE IS PROVIDED BY APPLE INC. ``AS IS'' AND ANY
+ * EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+ * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR
+ * PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL APPLE INC. OR
+ * CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
+ * EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
+ * PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR
+ * PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY
+ * OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+ * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+ * OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+ */
+
+.background-tint {
+    pointer-events: none;
+}
+
+.background-tint,
+.background-tint > div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+}
+
+.background-tint > .blur {
+    background-color: rgba(0, 0, 0, 0.55);
+    -webkit-backdrop-filter: saturate(180%) blur(17.5px);
+}
+
+.background-tint > .tint {
+    background-color: rgba(255, 255, 255, 0.14);
+    mix-blend-mode: lighten;
+}
+/*
+ * Copyright (C) 2016-2017 Apple Inc. All Rights Reserved.
+ *
+ * Redistribution and use in source and binary forms, with or without
+ * modification, are permitted provided that the following conditions
+ * are met:
+ * 1. Redistributions of source code must retain the above copyright
+ *    notice, this list of conditions and the following disclaimer.
+ * 2. Redistributions in binary form must reproduce the above copyright
+ *    notice, this list of conditions and the following disclaimer in the
+ *    documentation and/or other materials provided with the distribution.
+ *
+ * THIS SOFTWARE IS PROVIDED BY APPLE INC. ``AS IS'' AND ANY
+ * EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+ * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR
+ * PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL APPLE INC. OR
+ * CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
+ * EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
+ * PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR
+ * PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY
+ * OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+ * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+ * OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+ */
+
+button {
+    position: absolute;
+    left: 0;
+    border: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent !important;
+    -webkit-appearance: none;
+    -webkit-user-select: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+/* Icon */
+
+button > picture {
+    background-color: var(--secondary-glyph-color);
+    mix-blend-mode: plus-lighter;
+    -webkit-mask-size: 100% 100%;
+    -webkit-mask-repeat: no-repeat;
+    transition: transform 150ms;
+    will-change: transform;
+    /* Work around webkit.org/b/174565 by making the shrinking button's icon non-interactive */
+    pointer-events: none;
+}
+
+button.skip-back > picture,
+button.play-pause > picture,
+button.skip-forward > picture {
+    background-color: var(--primary-glyph-color);
+}
+
+button.on > picture {
+    background-color: white !important;
+}
+
+button:active > picture {
+    transform: scale(0.89);
+}
+
+/* Corner style */
+
+button.corner {
+    width: 44px !important;
+    height: var(--inline-controls-bar-height) !important;
+}
+
+/* Center style */
+
+button.center,
+button.small-center {
+    left: 50% !important;
+    top: 50% !important;
+    transform: translate(-50%, -50%);
+}
+
+button.center {
+    width: 60px !important;
+    height: 60px !important;
+}
+
+button.small-center {
+    width: 31px !important;
+    height: 31px !important;
+}
+
+button.center > .background-tint,
+button.small-center > .background-tint,
+button.center > .background-tint > div,
+button.small-center > .background-tint > div {
+    border-radius: 50%;
+}
+
+button.center > picture,
+button.small-center > picture {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100% !important;
+    height: 100% !important;
+    transform: scale(0.4);
+}
+
+button.center:active > picture,
+button.small-center:active > picture {
+    transform: scale(0.4) scale(calc(8/9));
+}
+/*
+ * Copyright (C) 2016 Apple Inc. All Rights Reserved.
+ *
+ * Redistribution and use in source and binary forms, with or without
+ * modification, are permitted provided that the following conditions
+ * are met:
+ * 1. Redistributions of source code must retain the above copyright
+ *    notice, this list of conditions and the following disclaimer.
+ * 2. Redistributions in binary form must reproduce the above copyright
+ *    notice, this list of conditions and the following disclaimer in the
+ *    documentation and/or other materials provided with the distribution.
+ *
+ * THIS SOFTWARE IS PROVIDED BY APPLE INC. ``AS IS'' AND ANY
+ * EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+ * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR
+ * PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL APPLE INC. OR
+ * CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
+ * EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
+ * PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR
+ * PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY
+ * OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+ * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+ * OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+ */
+
+.buttons-container {
+    position: absolute;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+/* Increase the touch region for buttons in containers on iOS */
+.ios .buttons-container button {
+    padding: 8px;
+    transform: translateX(-8px);
+    box-sizing: content-box;
+}
+/*
+ * Copyright (C) 2016 Apple Inc. All Rights Reserved.
+ *
+ * Redistribution and use in source and binary forms, with or without
+ * modification, are permitted provided that the following conditions
+ * are met:
+ * 1. Redistributions of source code must retain the above copyright
+ *    notice, this list of conditions and the following disclaimer.
+ * 2. Redistributions in binary form must reproduce the above copyright
+ *    notice, this list of conditions and the following disclaimer in the
+ *    documentation and/or other materials provided with the distribution.
+ *
+ * THIS SOFTWARE IS PROVIDED BY APPLE INC. ``AS IS'' AND ANY
+ * EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+ * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR
+ * PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL APPLE INC. OR
+ * CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
+ * EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
+ * PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR
+ * PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY
+ * OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+ * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+ * OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+ */
+
+.controls-bar {
+    position: absolute;
+    direction: ltr;
+    will-change: z-index;
+}
+/*
+ * Copyright (C) 2017 Apple Inc. All Rights Reserved.
+ *
+ * Redistribution and use in source and binary forms, with or without
+ * modification, are permitted provided that the following conditions
+ * are met:
+ * 1. Redistributions of source code must retain the above copyright
+ *    notice, this list of conditions and the following disclaimer.
+ * 2. Redistributions in binary form must reproduce the above copyright
+ *    notice, this list of conditions and the following disclaimer in the
+ *    documentation and/or other materials provided with the distribution.
+ *
+ * THIS SOFTWARE IS PROVIDED BY APPLE INC. ``AS IS'' AND ANY
+ * EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+ * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR
+ * PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL APPLE INC. OR
+ * CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
+ * EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
+ * PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR
+ * PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY
+ * OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+ * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+ * OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+ */
+
+/* Controls bar */
+
+.media-controls.inline > .controls-bar {
+    left: var(--inline-controls-inside-margin);
+    height: var(--inline-controls-bar-height);
+}
+
+.media-controls.inline.uses-ltr-user-interface-layout-direction > .controls-bar.top-left,
+.media-controls.inline:not(.uses-ltr-user-interface-layout-direction) > .controls-bar.top-right {
+    top: var(--inline-controls-inside-margin);
+}
+
+.media-controls.inline.uses-ltr-user-interface-layout-direction > .controls-bar.top-right,
+.media-controls.inline:not(.uses-ltr-user-interface-layout-direction) > .controls-bar.top-left {
+    left: auto;
+    right: var(--inline-controls-inside-margin);
+    top: var(--inline-controls-inside-margin);
+}
+
+.media-controls.inline.audio > .controls-bar {
+    top: auto;
+    left: auto;
+}
+
+.media-controls.inline > .controls-bar > * {
+    position: absolute;
+}
+
+/* Controls placement */
+
+.media-controls.inline > button.play-pause.corner {
+    left: var(--inline-controls-inside-margin) !important;
+    top: auto;
+    bottom: var(--inline-controls-inside-margin);
+}
+
+.media-controls.inline.audio > button.play-pause.corner {
+    left: auto !important;
+    top: auto;
+    bottom: auto;
+}
+
+.media-controls.inline > .controls-bar button {
+    height: 100% !important;
+}
+
+.media-controls.inline button.start.center > picture,
+.media-controls.inline button.play-pause.center.paused > picture {
+    left: 3px;
+}
+
+.media-controls.inline button.start.small-center > picture,
+.media-controls.inline button.play-pause.small-center.paused > picture {
+    left: 1px;
+}
+
+/* Labels */
+
+.media-controls.inline .time-control,
+.media-controls.inline .status-label {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+/*
+ * Copyright (C) 2016 Apple Inc. All Rights Reserved.
+ *
+ * Redistribution and use in source and binary forms, with or without
+ * modification, are permitted provided that the following conditions
+ * are met:
+ * 1. Redistributions of source code must retain the above copyright
+ *    notice, this list of conditions and the following disclaimer.
+ * 2. Redistributions in binary form must reproduce the above copyright
+ *    notice, this list of conditions and the following disclaimer in the
+ *    documentation and/or other materials provided with the distribution.
+ *
+ * THIS SOFTWARE IS PROVIDED BY APPLE INC. ``AS IS'' AND ANY
+ * EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+ * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR
+ * PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL APPLE INC. OR
+ * CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
+ * EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
+ * PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR
+ * PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY
+ * OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+ * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+ * OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+ */
+
+/* Controls bar */
+
+.media-controls.mac.fullscreen {
+    --controls-bar-width: 468px;
+    --tracks-panel-right-margin: 40px;
+
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.media-controls.mac.fullscreen > .controls-bar {
+    left: calc((100% - var(--controls-bar-width)) / 2);
+    bottom: 25px;
+    width: var(--controls-bar-width);
+    height: var(--fullscreen-controls-bar-height);
+}
+
+/* Volume slider */
+
+.media-controls.mac.fullscreen:not(.uses-ltr-user-interface-layout-direction) .volume.slider {
+    transform: scaleX(-1);
+}
+
+/* Button containers */
+
+.media-controls.mac.fullscreen .buttons-container {
+    height: 44px;
+}
+
+.media-controls.mac.fullscreen .buttons-container.left {
+    top: 16px;
+    height: 16px;
+}
+
+.media-controls.mac.fullscreen .buttons-container.center {
+    left: 50%;
+    top: 3px;
+    transform: translateX(-50%);
+}
+
+/* Make right container flush to the right */
+
+.media-controls.mac.fullscreen .buttons-container.right {
+    right: 0;
+}
+
+/* Buttons placement for right container */
+
+.media-controls.mac.fullscreen .buttons-container.right button {
+    top: 18px;
+}
+
+/* Scrubber */
+
+.media-controls.mac.fullscreen .time-control {
+    position: absolute;
+    left: 10px;
+    top: 49px;
+    height: 16px;
+    display: flex;
+    align-items: center;
+}
+
+/* Status Label */
+
+.media-controls.mac.fullscreen > .controls-bar .status-label {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 13px;
+    font-size: 14px;
+    text-align: center;
+}
+
+/* Volume slider */
+
+.media-controls.mac.inline .volume-slider-container {
+    position: absolute;
+    bottom: calc(var(--inline-controls-bar-height) + var(--inline-controls-inside-margin));
+    width: 94px;
+    height: 31px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    --volume-slider-transform: rotate(-90deg) translate(26px, -30px);
+    transform: var(--volume-slider-transform);
+}
+
+.media-controls.mac.inline.audio .volume-slider-container {
+    transform: var(--volume-slider-transform) translateY(-8px);
+}
+
+.media-controls.mac.inline .volume-slider-container > .background-tint {
+    top: 0;
+    left: var(--inline-controls-inside-margin);
+    right: 0;
+    bottom: 0;
+    width: auto;
+}
+
+.media-controls.mac.inline .volume-slider-container > .background-tint > div {
+    border-radius: 8px;
+}
+
+.media-controls.mac.inline .volume-slider-container > .slider {
+    margin-left: 6px;
+}
+/*
+ * Copyright (C) 2016 Apple Inc. All Rights Reserved.
+ *
+ * Redistribution and use in source and binary forms, with or without
+ * modification, are permitted provided that the following conditions
+ * are met:
+ * 1. Redistributions of source code must retain the above copyright
+ *    notice, this list of conditions and the following disclaimer.
+ * 2. Redistributions in binary form must reproduce the above copyright
+ *    notice, this list of conditions and the following disclaimer in the
+ *    documentation and/or other materials provided with the distribution.
+ *
+ * THIS SOFTWARE IS PROVIDED BY APPLE INC. ``AS IS'' AND ANY
+ * EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+ * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR
+ * PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL APPLE INC. OR
+ * CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
+ * EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
+ * PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR
+ * PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY
+ * OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+ * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+ * OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+ */
+
+:host {
+    /* We always want to prevent iOS dialogs and the magnifier UI to be shown. */
+    -webkit-user-select: none !important;
+    -webkit-touch-callout: none !important;
+}
+
+:host(audio) {
+    width: 250px;
+    height: var(--inline-controls-bar-height);
+    min-width: 44px !important;
+    min-height: var(--inline-controls-bar-height) !important;
+}
+
+* {
+    /* This constant needs to stay in sync with the InsideMargin JS constant. */
+    --inline-controls-inside-margin: 6px;
+    --fullscreen-controls-bar-height: 75px;
+    --primary-glyph-color: rgba(255, 255, 255, 0.75);
+    --secondary-glyph-color: rgba(255, 255, 255, 0.55);
+}
+
+:host(audio), :host(video.media-document.audio), * {
+    /* This constant needs to stay in sync with the BottomControlsBarHeight JS constant. */
+    --inline-controls-bar-height: 31px;
+}
+
+/* We need to use relative positioning due to webkit.org/b/163603 */
+.media-controls-container {
+    all: initial;
+    display: block;
+    visibility: inherit;
+    -webkit-cursor-visibility: inherit;
+    position: relative;
+    will-change: z-index;
+}
+
+.media-controls-container,
+.media-controls-container > * {
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.media-controls-container,
+.media-controls-container * {
+    -webkit-text-zoom: reset;
+    -webkit-text-size-adjust: auto;
+    -webkit-font-smoothing: subpixel-antialiased;
+}
+
+.media-controls-container > * {
+    position: absolute;
+}
+
+.media-controls {
+    height: 100%;
+    font-family: -apple-system;
+    -webkit-user-select: none;
+    white-space: nowrap;
+    text-align: initial;
+    cursor: default;
+    transform-origin: 0 0;
+}
+
+:host(:-webkit-animating-full-screen-transition) .media-controls {
+    display: none;
+}
+
+.media-controls > * {
+    transition: opacity 0.1s linear;
+}
+
+.media-controls.shows-tracks-panel > .controls-bar,
+.media-controls.shows-tracks-panel > button {
+    pointer-events: none;
+}
+
+.media-controls.faded > *:not(.placard) {
+    opacity: 0;
+    pointer-events: none;
+    transition-duration: 0.25s;
+}
+
+.media-controls > .controls-bar {
+    position: absolute;
+}
+
+.media-controls.fade-in {
+    animation-name: fade-in;
+    animation-duration: 350ms;
+}
+
+.media-controls .time-label,
+.media-controls .status-label {
+    color: var(--secondary-glyph-color);
+    mix-blend-mode: plus-lighter;
+}
+
+@keyframes fade-in {
+    from { opacity: 0 }
+    to   { opacity: 1 }
+}
+/*
+ * Copyright (C) 2017 Apple Inc. All Rights Reserved.
+ *
+ * Redistribution and use in source and binary forms, with or without
+ * modification, are permitted provided that the following conditions
+ * are met:
+ * 1. Redistributions of source code must retain the above copyright
+ *    notice, this list of conditions and the following disclaimer.
+ * 2. Redistributions in binary form must reproduce the above copyright
+ *    notice, this list of conditions and the following disclaimer in the
+ *    documentation and/or other materials provided with the distribution.
+ *
+ * THIS SOFTWARE IS PROVIDED BY APPLE INC. ``AS IS'' AND ANY
+ * EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+ * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR
+ * PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL APPLE INC. OR
+ * CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
+ * EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
+ * PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR
+ * PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY
+ * OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+ * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+ * OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+ */
+
+:host(.media-document) {
+    max-width: 100% !important;
+    max-height: 100% !important;
+    min-height: 50px !important;
+}
+
+/* Audio */
+
+:host(.media-document.audio) {
+    padding: 0 10px;
+    box-sizing: border-box;
+    height: var(--inline-controls-bar-height) !important;
+}
+
+:host(.media-document.audio.mac) {
+    width: 650px !important;
+    min-height: var(--inline-controls-bar-height) !important;
+}
+
+:host(.media-document.audio.ipad) {
+    width: 650px !important;
+}
+
+:host(.media-document.audio.iphone) {
+    width: 100% !important;
+}
+
+/* Video */
+
+:host(.media-document.video.mac) {
+    min-width: 700px !important;
+}
+
+:host(.media-document.video.ipad) {
+    min-width: 700px !important;
+}
+
+:host(.media-document.video.iphone) {
+    width: 100% !important;
+}
+
+/* Invalid state */
+
+:host(.media-document.video.invalid) .placard {
+    background-color: transparent;
+}
+/*
+ * Copyright (C) 2016 Apple Inc. All Rights Reserved.
+ *
+ * Redistribution and use in source and binary forms, with or without
+ * modification, are permitted provided that the following conditions
+ * are met:
+ * 1. Redistributions of source code must retain the above copyright
+ *    notice, this list of conditions and the following disclaimer.
+ * 2. Redistributions in binary form must reproduce the above copyright
+ *    notice, this list of conditions and the following disclaimer in the
+ *    documentation and/or other materials provided with the distribution.
+ *
+ * THIS SOFTWARE IS PROVIDED BY APPLE INC. ``AS IS'' AND ANY
+ * EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+ * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR
+ * PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL APPLE INC. OR
+ * CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
+ * EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
+ * PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR
+ * PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY
+ * OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+ * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+ * OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+ */
+
+.placard {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+
+    background-color: black;
+    color: rgb(164, 164, 164);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.placard .container {
+    max-width: 402px;
+    width: 100%;
+}
+
+.placard button {
+    position: relative;
+    margin: auto;
+    margin-bottom: 10px;
+    pointer-events: none;
+}
+
+.placard button > picture {
+    background-color: rgb(164, 164, 164) !important;
+}
+
+.placard .title,
+.placard .description {
+    padding: 0 10px;
+    text-align: center;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.placard .title {
+    font-size: 20px;
+}
+
+.placard .description {
+    font-size: 13px;
+    white-space: initial;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+}
+
+.media-controls:not(.uses-ltr-user-interface-layout-direction) .placard {
+    direction: rtl;
+}
+/*
+ * Copyright (C) 2016 Apple Inc. All Rights Reserved.
+ *
+ * Redistribution and use in source and binary forms, with or without
+ * modification, are permitted provided that the following conditions
+ * are met:
+ * 1. Redistributions of source code must retain the above copyright
+ *    notice, this list of conditions and the following disclaimer.
+ * 2. Redistributions in binary form must reproduce the above copyright
+ *    notice, this list of conditions and the following disclaimer in the
+ *    documentation and/or other materials provided with the distribution.
+ *
+ * THIS SOFTWARE IS PROVIDED BY APPLE INC. ``AS IS'' AND ANY
+ * EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+ * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR
+ * PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL APPLE INC. OR
+ * CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
+ * EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
+ * PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR
+ * PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY
+ * OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+ * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+ * OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+ */
+
+.slider {
+    position: relative;
+}
+
+.slider > .custom-slider,
+.slider > input {
+    position: absolute;
+    left: 0;
+    width: 100%;
+}
+
+.slider > .custom-slider {
+    pointer-events: none;
+    top: 5.5px;
+    height: 5px;
+}
+
+.slider > .custom-slider > * {
+    position: absolute;
+}
+
+.slider > .custom-slider > .fill {
+    top: 0;
+    height: 100%;
+    border-radius: 4.5px;
+    mix-blend-mode: plus-lighter;
+}
+
+.slider > .custom-slider > .track {
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.slider > .custom-slider > .primary {
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.35);
+}
+
+.slider > .custom-slider > .secondary {
+    background-color: rgba(255, 255, 255, 0.08);
+}
+
+.slider > .custom-slider > .knob {
+    top: -2px;
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background-color: white;
+    transform: translateX(-50%);
+}
+
+.slider > input {
+    top: 0;
+    margin: 0;
+    height: 100%;
+    background-color: transparent;
+    -webkit-appearance: none !important;
+}
+
+.ios .slider > input {
+    /* On iOS only, we want to only capture events on the thumb and not the track. */
+    pointer-events: none;
+
+    /* Make sure we don't show any UI as we drag the scrubber on iOS. */
+    -webkit-user-select: none !important;
+    -webkit-touch-callout: none !important;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.slider > input::-webkit-slider-thumb {
+    width: 9px;
+    height: 100%;
+    border: none;
+    box-shadow: none;
+    background-color: transparent;
+    -webkit-appearance: none !important;
+    pointer-events: all;
+}
+
+/* When disabled, we only want to show the track and turn off interaction. */
+
+.slider.disabled > input,
+.slider.disabled > .custom-slider > .primary,
+.slider.disabled > .custom-slider > .secondary,
+.slider.disabled > .custom-slider > .knob {
+    display: none;
+}
+
+/* Increase the touch region for the thumb on iOS */
+
+.ios .slider > input {
+    /* We need to extend the slider to ensure the padded thumb is
+       tracking along the same width as the custom slider rendering. */
+    width: calc(100% + 16px);
+    height: calc(100% + 10px);
+    transform: translate(-8px, -5px);
+}
+
+.ios .slider > input::-webkit-slider-runnable-track {
+    /* We need to force the height to be 100% as on some pages the height would
+       be 0 otherwise, see <rdar://problem/31769830>. */
+    height: 100%;
+}
+
+.ios .slider > input::-webkit-slider-thumb {
+    padding: 0 8px;
+    box-sizing: content-box;
+}
+/*
+ * Copyright (C) 2016 Apple Inc. All Rights Reserved.
+ *
+ * Redistribution and use in source and binary forms, with or without
+ * modification, are permitted provided that the following conditions
+ * are met:
+ * 1. Redistributions of source code must retain the above copyright
+ *    notice, this list of conditions and the following disclaimer.
+ * 2. Redistributions in binary form must reproduce the above copyright
+ *    notice, this list of conditions and the following disclaimer in the
+ *    documentation and/or other materials provided with the distribution.
+ *
+ * THIS SOFTWARE IS PROVIDED BY APPLE INC. ``AS IS'' AND ANY
+ * EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+ * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR
+ * PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL APPLE INC. OR
+ * CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
+ * EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
+ * PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR
+ * PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY
+ * OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+ * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+ * OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+ */
+
+.status-label {
+    position: absolute;
+
+    text-align: left;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+
+    font-size: 12px;
+}
+/*
+ * Copyright (C) 2016 Apple Inc. All Rights Reserved.
+ *
+ * Redistribution and use in source and binary forms, with or without
+ * modification, are permitted provided that the following conditions
+ * are met:
+ * 1. Redistributions of source code must retain the above copyright
+ *    notice, this list of conditions and the following disclaimer.
+ * 2. Redistributions in binary form must reproduce the above copyright
+ *    notice, this list of conditions and the following disclaimer in the
+ *    documentation and/or other materials provided with the distribution.
+ *
+ * THIS SOFTWARE IS PROVIDED BY APPLE INC. ``AS IS'' AND ANY
+ * EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+ * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR
+ * PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL APPLE INC. OR
+ * CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
+ * EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
+ * PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR
+ * PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY
+ * OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+ * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+ * OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+ */
+
+video::-webkit-media-text-track-container {
+    overflow: hidden;
+    padding-bottom: 0;
+    z-index: 0;
+
+    text-align: center;
+    color: rgba(255, 255, 255, 1);
+
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0;
+    text-decoration: none;
+    pointer-events: none;
+    -webkit-user-select: none;
+
+    flex: 1 1 auto;
+
+    -webkit-line-box-contain: block inline-box replaced;
+}
+
+video::-webkit-media-text-track-container.visible-controls-bar {
+    height: calc(100% - var(--inline-controls-bar-height) - var(--inline-controls-inside-margin));
+}
+
+video::cue {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+video::-webkit-media-text-track-display {
+    position: absolute;
+    overflow: hidden;
+    white-space: pre-wrap;
+    box-sizing: border-box;
+    font: 22px sans-serif;
+}
+
+video::-webkit-media-text-track-display-backdrop {
+    display: inline-block;
+}
+
+video::cue(:future) {
+    color: gray;
+}
+
+video::-webkit-media-text-track-container b {
+    font-weight: bold;
+}
+
+video::-webkit-media-text-track-container u {
+    text-decoration: underline;
+}
+
+video::-webkit-media-text-track-container i {
+    font-style: italic;
+}
+
+video::-webkit-media-text-track-container .hidden {
+    display: none;
+}
+/*
+ * Copyright (C) 2016 Apple Inc. All Rights Reserved.
+ *
+ * Redistribution and use in source and binary forms, with or without
+ * modification, are permitted provided that the following conditions
+ * are met:
+ * 1. Redistributions of source code must retain the above copyright
+ *    notice, this list of conditions and the following disclaimer.
+ * 2. Redistributions in binary form must reproduce the above copyright
+ *    notice, this list of conditions and the following disclaimer in the
+ *    documentation and/or other materials provided with the distribution.
+ *
+ * THIS SOFTWARE IS PROVIDED BY APPLE INC. ``AS IS'' AND ANY
+ * EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+ * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR
+ * PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL APPLE INC. OR
+ * CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
+ * EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
+ * PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR
+ * PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY
+ * OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+ * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+ * OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+ */
+
+.time-label {
+    position: absolute;
+
+    font-family: -apple-system-monospaced-numbers;
+    font-size: 12px;
+
+    text-align: right;
+
+    font-feature-settings: "case";
+}
+/*
+ * Copyright (C) 2016 Apple Inc. All Rights Reserved.
+ *
+ * Redistribution and use in source and binary forms, with or without
+ * modification, are permitted provided that the following conditions
+ * are met:
+ * 1. Redistributions of source code must retain the above copyright
+ *    notice, this list of conditions and the following disclaimer.
+ * 2. Redistributions in binary form must reproduce the above copyright
+ *    notice, this list of conditions and the following disclaimer in the
+ *    documentation and/or other materials provided with the distribution.
+ *
+ * THIS SOFTWARE IS PROVIDED BY APPLE INC. ``AS IS'' AND ANY
+ * EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+ * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR
+ * PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL APPLE INC. OR
+ * CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
+ * EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
+ * PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR
+ * PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY
+ * OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+ * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+ * OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+ */
+
+.tracks-panel {
+    position: absolute;
+    display: inline-block;
+}
+
+.tracks-panel > .scrollable-container {
+    border-radius: 8px;
+}
+
+.tracks-panel > .scrollable-container {
+    position: relative;
+    overflow-y: scroll;
+}
+
+.tracks-panel * {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.tracks-panel.fade-out {
+    transition-property: opacity;
+    transition-duration: 265ms;
+    opacity: 0;
+}
+
+.tracks-panel section {
+    border-top: 2px solid var(--secondary-glyph-color);
+    will-change: transform;
+}
+
+.tracks-panel section:first-of-type {
+    border-top: 0;
+}
+
+.tracks-panel section > h3 {
+    color: var(--primary-glyph-color);
+    mix-blend-mode: plus-lighter;
+    padding: 5px 20px 1px 21px;
+    margin: 0;
+}
+
+.tracks-panel section > ul {
+    list-style-type: none;
+    margin-top: 0;
+    padding: 0;
+}
+
+.tracks-panel section > ul > li {
+    position: relative;
+    padding: 1px 20px 1px 33px;
+    color: white;
+}
+
+.tracks-panel section > ul > li:focus {
+    background-color: rgb(20, 105, 209);
+    outline: none;
+}
+
+.tracks-panel section > ul > li.selected:before {
+    position: absolute;
+    top: 3px;
+    left: 12px;
+    width: 12px;
+    display: inline-block;
+    content: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300"><polygon fill="white" points="252.301,4.477 126.667,194.104 43.358,108.3 6.868,161.408 132.515,290.814 297.732,49.926"/></svg>');
+}
+
+.tracks-panel section > ul > li.animated {
+    animation-name: tracks-panel-item-selection;
+    animation-duration: 150ms;
+    animation-timing-function: step-end;
+    animation-fill-mode: forwards;
+}
+
+@keyframes tracks-panel-item-selection {
+    0%, 55.55% {
+        background-color: rgba(26, 68, 243, 0.6);
+        -webkit-backdrop-filter: saturate(180%) blur(20px);
+    }
+
+    22.22% {
+        background: none;
+        -webkit-backdrop-filter: none;
+    }
+}

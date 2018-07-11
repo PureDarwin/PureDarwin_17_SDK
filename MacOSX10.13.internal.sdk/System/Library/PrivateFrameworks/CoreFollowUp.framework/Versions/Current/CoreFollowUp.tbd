@@ -1,0 +1,24 @@
+--- !tapi-tbd-v2
+archs:           [ x86_64 ]
+uuids:           [ 'x86_64: C278B1E7-F02F-33FC-9C46-E9B0BF9E1149' ]
+platform:        macosx
+install-name:    /System/Library/PrivateFrameworks/CoreFollowUp.framework/Versions/A/CoreFollowUp
+exports:         
+  - archs:           [ x86_64 ]
+    symbols:         [ _CoreFollowUpVersionNumber, _CoreFollowUpVersionString, _FLDaemonExportedInterface, 
+                       _FLError, _FLErrorDomain, _FLFollowUpActionLaunchArgumentsKey, 
+                       _FLFollowUpItemsKey, _FLFollowUpPreferencesIdentifierPrefix, 
+                       _FLFollowUpPreferencesUrlPrefix, _FLFollowUpSingleActionKey, 
+                       _FLFollowUpSingleItemKey, _FLGroupIdentifierAccount, _FLGroupIdentifierDevice, 
+                       _FLGroupIdentifierUnknown, _FLHSA2ActionChangePassword, _FLInternalItemWhitelistWarning, 
+                       _FLLoc, _FLLocDeviceSpecific, _FLNotificationOptionForce, 
+                       _FLNotificationOptionLockscreen, _FLNotificationOptionNotificationCenter, 
+                       _FLNotificationOptionSpringboardAlert, __FLLocKeyFromDeviceClass, 
+                       __FLLogSystem, __FLLogSystemQuery ]
+    objc-classes:    [ _FLApprovedItemsDecorator, _FLApprovedItemsFilter, _FLConstants, 
+                       _FLDaemon, _FLEnvironment, _FLExtensionHostContext, _FLFollowUpAction, 
+                       _FLFollowUpController, _FLFollowUpItem, _FLFollowUpNotification, 
+                       _FLHSA2LoginNotification, _FLHSA2PasswordResetNotification, 
+                       _FLHeadlessActionHandler, _FLHeadlessExtensionLoader, _FLTelemetryFactory, 
+                       _FLTelemetryProcessor, _FLUIHelperController, _FLUtilities ]
+...

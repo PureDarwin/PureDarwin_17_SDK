@@ -1,0 +1,11 @@
+--- !tapi-tbd-v2
+archs:           [ i386, x86_64 ]
+uuids:           [ 'i386: 04DF7605-D607-3875-822D-A1D9C04407A6', 'x86_64: 513C763C-3E36-373D-A172-0163607D57DE' ]
+platform:        macosx
+install-name:    /System/Library/Frameworks/OpenCL.framework/Versions/A/Libraries/libcl2module.dylib
+current-version: 2.4.14
+objc-constraint: none
+exports:         
+  - archs:           [ i386, x86_64 ]
+    symbols:         [ _cl2module ]
+...
